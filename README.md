@@ -243,3 +243,6 @@ javascript: (function() {
 }
 )();
 ```
+
+## Similiar Projects
+https://github.com/bgrins/devtools-snippets
