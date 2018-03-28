@@ -3,14 +3,15 @@
 This is a collection of usefull 🚀💪 / unuseful 🙈 Snippets for JS developer
 that you can run on any page by using the Chrome snippets toolbar.
 
-## 👩‍🎨 Turn on Designmode
+### 👩‍🎨 Turn on Designmode
 
 you can turn on design mode to manipulate for example text or add an icon on a
 page.
 
 `document.designMode = 'on';`
 
-## Add jQuery
+
+###  [![jquery logo](<img src="https://simpleicons.org/icons/jquery.svg" width="24">)] Add jQuery
 
 ```
 javascript: (function(e, s) {
@@ -23,7 +24,7 @@ javascript: (function(e, s) {
 })(document.createElement('script'), '//code.jquery.com/jquery-latest.min.js')
 ```
 
-## Add FPS meter
+### 📏 Add FPS meter
 
 Add a JS Performance Monitor [More infos](https://github.com/mrdoob/stats.js/)
 
@@ -230,7 +231,7 @@ javascript: (function() {
 timing.printTable();
 ```
 
-## 👓 Tota11y Accessibility
+### 👓 Tota11y Accessibility
 
 [More infos](khan.github.io/tota11y/tota11y/build/tota11y)
 
@@ -243,6 +244,14 @@ javascript: (function() {
 }
 )();
 ```
+### 🏹 Active Element logger
+
+logs the active Element which got selected by clicking on a node. 
+
+```js
+javascript:(function(){if(window._activeElInterval){clearInterval(window._activeElInterval);delete window._activeElInterval;}else{var activeEl;window._activeElInterval=setInterval(function(){var currentActiveEl=document.activeElement;if(currentActiveEl!==activeEl){activeEl=currentActiveEl;console.log(activeEl);}},200);}})();
+```
+
 
 ## Similiar Projects
 https://github.com/bgrins/devtools-snippets
