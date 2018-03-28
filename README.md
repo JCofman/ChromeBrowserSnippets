@@ -147,9 +147,9 @@ currently visited page and [More infos](https://zeman.github.io/perfmap)
 
 ```
 javascript: (function() {
-    $('[style]').removeAttr('style');
-    $('link[type="text/css"]').remove();
-    $('style').remove();
+    jQuery('[style]').removeAttr('style');
+    jQuery('link[type="text/css"]').remove();
+    jQuery('style').remove();
 }
 )();
 ```
