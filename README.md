@@ -252,6 +252,28 @@ logs the active Element which got selected by clicking on a node.
 javascript:(function(){if(window._activeElInterval){clearInterval(window._activeElInterval);delete window._activeElInterval;}else{var activeEl;window._activeElInterval=setInterval(function(){var currentActiveEl=document.activeElement;if(currentActiveEl!==activeEl){activeEl=currentActiveEl;console.log(activeEl);}},200);}})();
 ```
 
+### 🌏 Print global object keys
+
+prints global objects which are not included in default browser window. 
+
+```js
+
+(function(){
+    // create a blank iframe
+    const iframe = document.createElement('iframe');
+    // append it to the body
+    document.body.append(iframe);
+    //grab its window object
+    const virgin = Object.keys(iframe.contentWindow);
+
+    current = Object.keys(window);
+    // filter for ones that arent in the blank virgin iframe
+    const added = current.filter(key => !virgin.includes(key));
+
+    console.log(added);
+})()
+```
+
 
 ## Similiar Projects
 https://github.com/bgrins/devtools-snippets
